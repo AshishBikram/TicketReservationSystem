@@ -1,0 +1,40 @@
+<div class="nav-bar">
+    <app-header></app-header>
+</div>
+<div class="content">
+    <div class="title">
+        <h3>Ticket List</h3>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body p-o table-responsive table-ctm">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>S.N.</td>
+                            <td>Start Place</td>
+                            <td>End Destination</td>
+                            <td>Departure Date</td>
+                            <td>Departure Time</td>
+                            <td>Price</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ticket of ticketList;let i = index;">
+                            <td>{{i +1}}</td>
+                            <td>{{ticket.START_DESTINATION}}</td>
+                            <td>{{ticket.END_DESTINATION}}</td>
+                            <td>{{ticket.DEPARTURE_DATE}}</td>
+                            <td>{{ticket.DEPARTURE_TIME}}</td>
+                            <td>{{ticket.PRICE}}</td>
+
+                            <td><button class="btn btn-success"
+                                    [routerLink]="'/reservation/'+ ticket.ID">Reservation</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

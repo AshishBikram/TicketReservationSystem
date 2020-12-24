@@ -1,0 +1,48 @@
+<div class="nav-bar">
+    <app-header></app-header>
+</div>
+<div class="content">
+    <div class="title">
+        <h5>Reserved Ticket List</h5>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body p-o table-responsive table-ctm">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>S.N.</td>
+                            <td>Reserved By</td>
+                            <td>Start Place</td>
+                            <td>End Destination</td>
+                            <td>Departure Date</td>
+                            <td>Departure Time</td>
+                            <td>Total Price</td>
+                            <td>Total Ticket</td>
+                            <td>Paid Status</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ticket of reserveTicketFormatList;let i = index;">
+                            <td>{{i +1}}</td>
+                            <td>{{ticket.NAME}}</td>
+                            <td>{{ticket.ticket.START_DESTINATION}}</td>
+                            <td>{{ticket.ticket.END_DESTINATION}}</td>
+                            <td>{{ticket.ticket.DEPARTURE_DATE}}</td>
+                            <td>{{ticket.ticket.DEPARTURE_TIME}}</td>
+                            <td>{{ticket.TOTAL_PRICE}}</td>
+                            <td>{{ticket.TOTAL_TICKET}}</td>
+                            <td>{{ticket.paid ? "PAID": "UNPAID"}}</td>
+                            <td>
+                                <button *ngIf="!ticket.paid" class="btn btn-success" (click)="pay(ticket.ID)">
+                                    Pay Now</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

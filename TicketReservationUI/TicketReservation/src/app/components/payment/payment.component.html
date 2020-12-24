@@ -1,0 +1,44 @@
+<div class="nav-bar">
+    <app-header></app-header>
+</div>
+<div class="content container">
+    <div class="sub-container mat-card">
+        <div class="title">
+            <h5>Reserved Ticket Information</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Reserved By: {{ticketDetails.reservation.NAME}}</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Start Destination: {{ticketDetails.ticket.START_DESTINATION}}</label>
+            </div>
+            <div class="col-md-3">
+                <label>End Destination: {{ticketDetails.ticket.END_DESTINATION}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Total Cost: {{ticketDetails.reservation.TOTAL_PRICE}}</label>
+            </div>
+            <div class="col-md-3">
+                <label>Total Tickets: {{ticketDetails.reservation.TOTAL_TICKET}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Departure Date: {{ticketDetails.ticket.DEPARTURE_DATE}}</label>
+            </div>
+            <div class="col-md-3">
+                <label>Departure Time: {{ticketDetails.ticket.DEPARTURE_TIME}}</label>
+            </div>
+
+        </div>
+        <button class="btn btn-success" (click)="pay()">Pay Now</button> <button (click)="goTo()"
+            class="btn btn-danger">Pay
+            Later</button>
+    </div>
+</div>

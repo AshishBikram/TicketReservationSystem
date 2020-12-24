@@ -1,0 +1,22 @@
+<div class="nav-bar">
+    <app-header></app-header>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="">
+                <h6 style="text-align: center;">Total Ticket Sold Per Day</h6>
+                <app-line-graph [data]="chartData.day_vs_total_ticket"></app-line-graph>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div style="text-align: center;">
+                <h6>Total Earning Per Day</h6>
+                <app-line-graph [data]="chartData.day_vs_total_price"></app-line-graph>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <h1>Online Ticket System</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button [routerLink]="'/dashboard'"> Dashboard </a>
+            <a mat-button [routerLink]="'/ticket'"> Ticket </a>
+            <a mat-button [routerLink]="'/reservation-list'"> Reservation List </a>
+        </div>
+        <div class="">
+            <a mat-button [routerLink]="'/logout'">Logout</a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

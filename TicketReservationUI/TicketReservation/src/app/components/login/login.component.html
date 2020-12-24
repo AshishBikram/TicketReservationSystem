@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <mat-card>
+                    <div class="title-box">
+                        <h1>Ticket Reservation System</h1>
+                    </div>
+                    <div class="login-form">
+                        <mat-card>
+                            <form (ngSubmit)="submit()" [formGroup]="loginForm">
+                                <div class="form-group">
+
+                                    <label class="form-title">Username</label>
+                                    <input type="text" class="form-control" name="email" formControlName="username"
+                                        placeholder="Username" autocomplete="off" />
+                                    <span *ngIf="loginForm.controls.username.invalid && formSubmitted">
+                                        <span class="validation-error"
+                                            *ngIf="loginForm.controls.username.errors.required ">
+                                            Please enter username
+                                        </span>
+                                        <span class="validation-error"
+                                            *ngIf="loginForm.controls.username.errors.email ">
+                                            Please enter email format
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-title">Password</label>
+                                    <input type="password" class="form-control" name="password"
+                                        formControlName="password" placeholder="Password" autocomplete="off" />
+                                    <span *ngIf="loginForm.controls.password.invalid && formSubmitted">
+                                        <span class="validation-error"
+                                            *ngIf="loginForm.controls.password.errors.required ">
+                                            Please enter password
+                                        </span>
+                                    </span>
+                                </div>
+                                <button type="submit" class="btn btn-default btn-login" [disabled]="loginInProgress">
+                                    Login
+                                </button>
+                            </form>
+                        </mat-card>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>

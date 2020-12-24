@@ -1,0 +1,44 @@
+.input-group {
+    margin-bottom: 20px;
+  }
+  .input-bg .form-control{
+    border: none;
+    box-shadow: inherit;
+    background: none;
+    padding: 0;
+  }
+  
+  .input-bg{
+    background-color: #e8f0fe;
+  }
+
+  .input-bg .form-control:focus{background: none;}
+  .btn-default.btn-login{
+    width: 100%;
+    background: #b63247;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 75px;
+    border-radius: 10px;
+  }
+  
+  .btn-default.btn-login:hover{
+    background: #9e2639;
+  }
+  .title-box h1{
+      font-size: 27px;
+      text-align: center;
+  }
+  .content{
+      margin-top: 10%;
+  }
+  .form-title{
+      font-size: 14px;
+  }
+  .validation-error {
+    display: block;
+    color: #f44336;
+    font-size: 11px;
+  }

@@ -1,0 +1,57 @@
+<div class="nav-bar">
+    <app-header></app-header>
+</div>
+<div class="content container">
+    <div class="sub-container mat-card">
+        <div class="title">
+            <h5>Ticket Details</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Start Destination: {{ticketDetails.START_DESTINATION}}</label>
+            </div>
+            <div class="col-md-3">
+                <label>End Destination: {{ticketDetails.END_DESTINATION}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Price: {{ticketDetails.PRICE}}</label>
+            </div>
+            <div class="col-md-3">
+                <label>Departure Date: {{ticketDetails.DEPARTURE_DATE}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label>Departure Time: {{ticketDetails.DEPARTURE_TIME}}</label>
+            </div>
+
+        </div>
+        <div class="">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-title">Name</label>
+                            <input type="text" class="form-control" placeholder="Name" autocomplete="off"
+                                [(ngModel)]="name" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-title">Total Quantity</label>
+                            <input type="number" class="form-control" placeholder="Total Quantity" autocomplete="off"
+                                (click)="calculateTotal()" [(ngModel)]="total_quantity" min="1"
+                                [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        Total Price: {{totalPrice}}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="submitInProgress" (click)="submit()">
+                    Reserve
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
